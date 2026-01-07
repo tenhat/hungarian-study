@@ -135,6 +135,7 @@ export function Flashcard({ word, onSwipeResult }: FlashcardProps) {
               "absolute inset-0 flex flex-col items-center justify-center backface-hidden bg-white border-none shadow-xl overflow-hidden cursor-pointer",
               isFlipped ? "pointer-events-none" : ""
             )}
+            style={{ transform: 'translateZ(1px)' }}
             onClick={handleFlip}
           >
             {!isFlipped && (
@@ -186,7 +187,7 @@ export function Flashcard({ word, onSwipeResult }: FlashcardProps) {
               "absolute inset-0 flex flex-col items-center justify-between backface-hidden bg-white border-2 border-accent-green/30 shadow-xl p-6 cursor-default isolate overflow-hidden",
               !isFlipped ? "pointer-events-none" : ""
             )}
-            style={{ transform: 'rotateY(180deg)' }}
+            style={{ transform: 'rotateY(180deg) translateZ(1px)' }}
             onClick={(e) => e.stopPropagation()}
           >
             {/* Top Clickable Area for Flip */}
