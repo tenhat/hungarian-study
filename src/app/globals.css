@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #FFFAD1;
+  --color-text: #4A4A4A;
+  
+  /* Accents */
+  --color-accent-green: #A8D5BA;
+  --color-accent-pink: #F4A6A6;
+  --color-accent-yellow: #F9E07F;
+  --color-card: #FFFFFF;
+
+  /* Fonts */
+  --font-serif: var(--font-cormorant), serif;
+  --font-sans: var(--font-mplus), sans-serif;
+  
+  /* Radius override for that bubbly look */
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+}
+
+/* Custom Utilities if needed */
+@layer utilities {
+  .text-shadow-sm {
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.1);
+  }
+  
+  /* 3D Transform Utilities */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
