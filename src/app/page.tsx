@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Settings } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLearningStore } from '@/lib/store';
 import { words } from '@/lib/data';
@@ -35,22 +34,7 @@ export default function Home() {
 
       <div className="z-10 w-full max-w-lg px-6 py-12 flex flex-col items-center space-y-10">
         
-        {/* Hero Section */}
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative w-64 h-64 md:w-80 md:h-80 mb-4"
-        >
-          <div className="absolute inset-0 bg-accent-yellow/20 rounded-full blur-2xl animate-pulse" />
-          <Image 
-            src="/images/hero.png" 
-            alt="Study Dog Illustration" 
-            fill
-            className="object-contain drop-shadow-lg"
-            priority
-          />
-        </motion.div>
+
 
         {/* Title Section */}
         <motion.div
